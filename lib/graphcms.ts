@@ -39,7 +39,7 @@ export const getProjects = async (): Promise<IProjectData> => {
   const data = await fetchAPI(
     `
     query Projects {
-      projects {
+      projects(orderBy: createdAt_DESC) {
         id
         name
         image {
