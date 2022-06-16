@@ -10,12 +10,12 @@ export const Header = (props: Props) => {
   return (
     <header className="p-5 flex justify-center h-[10vh]">
       <nav>
-        <ul className="flex gap-4 text-2xl">
+        <ul className="flex gap-4 text-2xl font-PlayFairDisplay">
           <li>
             <Link href="/">
               <a
                 className={`${
-                  router.pathname == "/" ? "border-b-2 border-blue-300" : ""
+                  router.pathname == "/" ? "border-b-2 border-cyan-800" : ""
                 }`}
               >
                 Home
@@ -26,7 +26,7 @@ export const Header = (props: Props) => {
             <Link href="/projects">
               <a
                 className={`${
-                  router.pathname == "/projects" ? "border-b-2 border-blue-300" : ""
+                  router.pathname == "/projects" ? "border-b-2 border-cyan-800" : ""
                 }`}
               >
                 Projects
@@ -37,7 +37,7 @@ export const Header = (props: Props) => {
             <Link href="/contact">
               <a
                 className={`${
-                  router.pathname == "/contact" ? "border-b-2 border-blue-300" : ""
+                  router.pathname == "/contact" ? "border-b-2 border-cyan-800" : ""
                 }`}
               >
                 Contact
