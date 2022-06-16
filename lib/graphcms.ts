@@ -20,7 +20,7 @@ const fetchAPI = async (query: string) => {
   return json.data;
 };
 
-interface IProject {
+export interface IProject {
   id: string;
   name: string;
   image: {
@@ -56,12 +56,14 @@ export const getProjects = async (): Promise<IProjectData> => {
   return data;
 };
 
+export interface IContact {
+  githubLink: string;
+  linkedinLink: string;
+  email: string;
+}
+
 export interface IContactData {
-  contact: {
-    githubLink: string;
-    linkedinLink: string;
-    email: string;
-  };
+  contact: IContact;
 }
 
 export const getContact = async (): Promise<IContactData> => {
