@@ -8,7 +8,7 @@ export const Header = (props: Props) => {
   const router = useRouter();
 
   return (
-    <header className="p-5 flex justify-center h-[10vh]">
+    <header className="p-5 flex justify-center h-[10vh] sticky top-0 z-10 w-full bg-white">
       <nav>
         <ul className="flex gap-4 text-2xl font-PlayFairDisplay">
           <li>
