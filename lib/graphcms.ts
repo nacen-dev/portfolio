@@ -20,7 +20,6 @@ const fetchAPI = async (query: string) => {
   return json.data;
 };
 
-
 interface IProject {
   id: string;
   name: string;
@@ -49,6 +48,51 @@ export const getProjects = async (): Promise<IProjectData> => {
         description
         repositoryLink
         websiteLink
+      }
+    }
+    `
+  );
+
+  return data;
+};
+
+export interface IContactData {
+  contact: {
+    githubLink: string;
+    linkedinLink: string;
+    email: string;
+  };
+}
+
+export const getContact = async (): Promise<IContactData> => {
+  const data = await fetchAPI(
+    `
+    {
+      contact(where:{id:"cl4h7k3mk3gjw0d16xtfgwmtr"}) {
+        githubLink
+        linkedinLink
+        email
+      }
+    }`
+  );
+
+  return data;
+};
+
+export interface IAboutData {
+  about: {
+    introduction: string;
+    description: string;
+  };
+}
+
+export const getAbout = async (): Promise<IAboutData> => {
+  const data = await fetchAPI(
+    `
+    {
+      about(where:{ id:"cl4h6s6yr3e5o0dzltcxqodt0"}) {
+        introduction
+        description
       }
     }
     `
