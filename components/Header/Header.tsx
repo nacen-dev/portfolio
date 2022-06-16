@@ -16,7 +16,7 @@ export const Header = (props: Props) => {
               <a
                 className={`${
                   router.pathname == "/" ? "border-b-2 border-cyan-800" : ""
-                }`}
+                } hover:text-sky-800`}
               >
                 Home
               </a>
@@ -27,7 +27,7 @@ export const Header = (props: Props) => {
               <a
                 className={`${
                   router.pathname == "/projects" ? "border-b-2 border-cyan-800" : ""
-                }`}
+                } hover:text-sky-800`}
               >
                 Projects
               </a>
@@ -38,7 +38,7 @@ export const Header = (props: Props) => {
               <a
                 className={`${
                   router.pathname == "/contact" ? "border-b-2 border-cyan-800" : ""
-                }`}
+                } hover:text-sky-800`}
               >
                 Contact
               </a>
