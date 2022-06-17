@@ -1,4 +1,5 @@
-import { GetStaticProps } from "next";
+import { GetStaticProps, NextPage } from "next";
+import Head from "next/head";
 import React from "react";
 import { ProjectPreview } from "../components/ProjectPreview/ProjectPreview";
 
@@ -8,9 +9,12 @@ interface Props {
   projects: IProject[];
 }
 
-const Projects = ({ projects }: Props) => {
+const Projects:NextPage<Props> = ({ projects }) => {
   return (
     <main className="bg-slate-800 py-8 px-[5%]">
+      <Head>
+        <title>{"Vincent's Projects"}</title>
+      </Head>
       <div className="flex flex-col gap-16">
         {projects.map((project) => (
           <ProjectPreview key={project.id} project={project} />

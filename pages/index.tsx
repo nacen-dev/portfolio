@@ -1,6 +1,6 @@
 import type { GetStaticProps, NextPage } from "next";
+import Head from "next/head";
 import Link from "next/link";
-import { MdArrowForwardIos } from "react-icons/md";
 import { getAbout } from "../lib/graphcms";
 
 interface Props {
@@ -13,6 +13,9 @@ interface Props {
 const Home: NextPage<Props> = ({ about }) => {
   return (
     <main className="bg-slate-800 h-[90vh] p-4">
+      <Head>
+        <title>{"Vincent's Portfolio"}</title>
+      </Head>
       <div className="rounded text-white border-cyan-200 border-2 p-4 py-6 sm:p-10 mt-10 max-w-[768px] mx-4 sm:mr-auto sm:ml-auto">
         <h1 className="text-3xl sm:text-4xl font-PlayFairDisplay font-bold mb-4">
           {about.introduction}
