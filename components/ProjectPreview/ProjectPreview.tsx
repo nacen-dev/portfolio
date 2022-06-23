@@ -22,7 +22,7 @@ export const ProjectPreview = ({ project }: Props) => {
         <div className="relative w-full h-full shadow-lg">
           <Image
             src={project.image.url}
-            alt=""
+            alt="Link to project"
             layout="fill"
             className="shadow-sm"
           />
