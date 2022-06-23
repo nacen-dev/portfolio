@@ -35,14 +35,14 @@ export const ProjectPreview = ({ project }: Props) => {
         </h3>
         <p className="text-lg">{project.description}</p>
         <button className="w-full bg-sky-800 text-white py-2 mt-6 rounded-lg flex items-center gap-2 justify-center hover:scale-105 transition-transform duration-300">
-          <a href={project.repositoryLink} target="_blank" rel="noreferrer">
+          <a href={project.repositoryLink} target="_blank" rel="noreferrer" className="w-full inline-block">
             View Code Repository
           </a>
           <BsGithub />
         </button>
         {project.websiteLink && (
           <button className="w-full bg-sky-800 text-white py-2 mt-6 flex items-center justify-center gap-2 rounded-lg hover:scale-105 transition-transform duration-300">
-            <a href={project.websiteLink} target="_blank" rel="noreferrer">
+            <a href={project.websiteLink} target="_blank" rel="noreferrer" className="w-full inline-block">
               Visit Website
             </a>
             <BiLinkExternal />
