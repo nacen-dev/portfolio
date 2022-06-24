@@ -34,18 +34,28 @@ export const ProjectPreview = ({ project }: Props) => {
           {project.name}
         </h3>
         <p className="text-lg">{project.description}</p>
-        <button className="w-full bg-sky-800 text-white py-2 mt-6 rounded-lg flex items-center gap-2 justify-center hover:scale-105 transition-transform duration-300">
-          <a href={project.repositoryLink} target="_blank" rel="noreferrer" className="w-full inline-block">
-            View Code Repository
+        <button className="w-full bg-sky-800 text-white py-2 mt-6 rounded-lg hover:scale-105 transition-transform duration-300">
+          <a
+            href={project.repositoryLink}
+            target="_blank"
+            rel="noreferrer"
+            className="w-full flex items-center justify-center gap-2"
+          >
+            <span>View Code Repository</span>
+            <BsGithub />
           </a>
-          <BsGithub />
         </button>
         {project.websiteLink && (
-          <button className="w-full bg-sky-800 text-white py-2 mt-6 flex items-center justify-center gap-2 rounded-lg hover:scale-105 transition-transform duration-300">
-            <a href={project.websiteLink} target="_blank" rel="noreferrer" className="w-full inline-block">
-              Visit Website
+          <button className="w-full bg-sky-800 text-white py-2 mt-6 rounded-lg hover:scale-105 transition-transform duration-300">
+            <a
+              href={project.websiteLink}
+              target="_blank"
+              rel="noreferrer"
+              className="w-full flex items-center justify-center gap-2"
+            >
+              <span>Visit Website</span>
+              <BiLinkExternal />
             </a>
-            <BiLinkExternal />
           </button>
         )}
       </div>
