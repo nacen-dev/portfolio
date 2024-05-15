@@ -37,7 +37,7 @@ const Home: NextPage<Props> = ({ about, contact, projects }) => {
         <p className="text-xl text-slate-200  whitespace-pre-wrap">
           {about.description}
         </p>
-        <div className="flex flex-col sm:flex-row sm:justify-end w-full mt-6 gap-4">
+        <div className="flex flex-col items-center sm:flex-row sm:justify-end w-full mt-6 gap-4">
           <button className="bg-sky-800 px-5 py-2 text-white rounded flex items-center gap-2 hover:scale-105 text-lg max-w-[200px] w-full justify-center">
             <Link href="/#projects" scroll={false}>
               View my work
