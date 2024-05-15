@@ -24,14 +24,14 @@ const Home: NextPage<Props> = ({ about }) => {
         <div className="flex sm:justify-end w-full mt-4">
           <button className="bg-sky-800 px-5 py-2 text-white rounded flex items-center gap-2 hover:scale-105 text-lg max-w-[200px] w-full justify-center">
             <Link href="/projects">
-              <a>View my work</a>
+              View my work
             </Link>
           </button>
         </div>
         <div className="flex sm:justify-end w-full mt-4">
           <button className="bg-sky-800 px-5 py-2 text-white rounded flex items-center gap-2 hover:scale-105 text-lg max-w-[200px] w-full justify-center">
             <Link href="/contact">
-              <a>Contact Me</a>
+              Contact Me
             </Link>
           </button>
         </div>
