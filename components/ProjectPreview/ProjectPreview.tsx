@@ -23,8 +23,8 @@ export const ProjectPreview = ({ project }: Props) => {
           <Image
             src={project.image.url}
             alt="Link to project"
-            layout="fill"
             className="shadow-sm"
+            fill
           />
         </div>
       </a>
