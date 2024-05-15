@@ -2,6 +2,7 @@ import type { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import { getAbout } from "../lib/graphcms";
+import { dayInSeconds } from "../util/util";
 
 interface Props {
   about: {
@@ -44,7 +45,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const aboutData = await getAbout();
   return {
     props: { about: aboutData.about },
-    revalidate: 86400, // revalidate after 1 day
+    revalidate: dayInSeconds * 3, // revalidate after 1 day
   };
 };
 

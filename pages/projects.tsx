@@ -4,6 +4,7 @@ import React from "react";
 import { ProjectPreview } from "../components/ProjectPreview/ProjectPreview";
 
 import { getProjects, IProject } from "../lib/graphcms";
+import { dayInSeconds } from "../util/util";
 
 interface Props {
   projects: IProject[];
@@ -28,7 +29,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const projectsData = await getProjects();
   return {
     props: { projects: projectsData.projects },
-    revalidate: 86400, // revalidate after 1 day
+    revalidate: dayInSeconds * 3,
   };
 };
 
